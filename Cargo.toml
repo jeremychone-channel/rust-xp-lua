@@ -1,0 +1,13 @@
+[package]
+name = "xp-lua"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.78"
+
+[lints.rust]
+unsafe_code = "forbid"
+unused = { level = "allow", priority = -1 } # For exploratory dev.
+
+[dependencies]
+# -- Lua
+mlua = { version = "0.10", features = ["lua54", "vendored", "async", "send"] }
